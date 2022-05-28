@@ -1,0 +1,27 @@
+.titulo-logo {
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 3.5px;
+}
+
+.subtitulo-logo {
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+    color: #000;
+    transition: color 0.7s;
+}
+
+.subtitulogo:hover {
+    color: #999;
+}
+
+#menu li > a {
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.5s;
+}
+
+#menu li > a:hover {
+    color: #999;
+}
