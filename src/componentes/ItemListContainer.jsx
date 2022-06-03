@@ -1,8 +1,9 @@
 import React from 'react';
+import ItemCount from './ItemCount.jsx';
 
-function ItemListContainer(props) {
+function ItemListContainer() {
     return (
-        <h3 className="text-center mt-5 fs-4 text-uppercase">{props.saludo}</h3>
+        <ItemCount stock='8' initial='1' />
     )
 }
 

@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="App">
       <NavBar  /> 
-      <ItemListContainer 
-      saludo ='Bievenidx a Eita! Club Exclusivo de Cerveza'/>
+      <ItemListContainer  />
     </div>
   );
 }
