@@ -1,9 +1,11 @@
 import React from 'react';
-import ItemCount from './ItemCount.jsx';
+import Items from './Items.jsx';
 
 function ItemListContainer() {
+    
+
     return (
-        <ItemCount stock='8' initial='1' />
+        <Items />
     )
 }
 
