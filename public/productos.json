@@ -1,0 +1,52 @@
+[
+    {
+        "id": 0, 
+        "name": "Buzz",
+        "estilo":"English Best Bitter",
+        "tagline": "A Real Bitter Experience", 
+        "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+        "img": "./imagenes/bestBitter.jpg"
+    },
+
+    {
+        "id": 1, 
+        "name": "Trashy Blonde",
+        "estilo":"Pale Ale",
+        "tagline": "You Know You Shouldn't", 
+        "description": "A titillating, neurotic, peroxide punk of a Pale A…the customary BrewDog bite and imaginative twist.",
+        "img": "./imagenes/americanPaleAle.jpg"
+    },
+
+    {
+        "id": 2, 
+        "name": "Trashy Blonde",
+        "estilo":"Pale Ale",
+        "tagline": "You Know You Shouldn't", 
+        "description": "A titillating, neurotic, peroxide punk of a Pale A…the customary BrewDog bite and imaginative twist.",
+        "img": "./imagenes/americanPaleAle.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Suscribite al Club",
+        "precio": 2800,
+        "texto": "Acceda a ejemplares pasados del Club Exclusivo. Acceso excluviso a miembros.",
+        "img": "../img/tienda-card4.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Weissbier",
+        "precio": 2800,
+        "texto": "Premium German Beer",
+        "img": "https://cdn.pixabay.com/photo/2018/05/31/16/51/beer-3444480__340.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Suscribite al Club",
+        "precio": 2800,
+        "texto": "Acceda a ejemplares pasados del Club Exclusivo. Acceso excluviso a miembros.",
+        "img": "https://cdn.pixabay.com/photo/2017/06/24/23/41/beer-2439237__340.jpg"
+    }
+]
+
+
+
