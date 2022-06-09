@@ -1,52 +1,35 @@
 [
-    {
-        "id": 0, 
-        "name": "Buzz",
-        "estilo":"English Best Bitter",
-        "tagline": "A Real Bitter Experience", 
-        "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
-        "img": "./imagenes/bestBitter.jpg"
-    },
-
-    {
-        "id": 1, 
-        "name": "Trashy Blonde",
-        "estilo":"Pale Ale",
-        "tagline": "You Know You Shouldn't", 
-        "description": "A titillating, neurotic, peroxide punk of a Pale A…the customary BrewDog bite and imaginative twist.",
-        "img": "./imagenes/americanPaleAle.jpg"
-    },
-
-    {
-        "id": 2, 
-        "name": "Trashy Blonde",
-        "estilo":"Pale Ale",
-        "tagline": "You Know You Shouldn't", 
-        "description": "A titillating, neurotic, peroxide punk of a Pale A…the customary BrewDog bite and imaginative twist.",
-        "img": "./imagenes/americanPaleAle.jpg"
-    },
-    {
-        "id": 3,
-        "nombre": "Suscribite al Club",
-        "precio": 2800,
-        "texto": "Acceda a ejemplares pasados del Club Exclusivo. Acceso excluviso a miembros.",
-        "img": "../img/tienda-card4.jpg"
-    },
-    {
-        "id": 4,
-        "nombre": "Weissbier",
-        "precio": 2800,
-        "texto": "Premium German Beer",
-        "img": "https://cdn.pixabay.com/photo/2018/05/31/16/51/beer-3444480__340.jpg"
-    },
-    {
-        "id": 5,
-        "nombre": "Suscribite al Club",
-        "precio": 2800,
-        "texto": "Acceda a ejemplares pasados del Club Exclusivo. Acceso excluviso a miembros.",
-        "img": "https://cdn.pixabay.com/photo/2017/06/24/23/41/beer-2439237__340.jpg"
-    }
+  
+  {
+    "id": 1,
+    "estilo": "English Bitter",
+    "precio": "$3.00",
+    "stock": 8,
+    "tagline": "A Real Bitter Experience.",
+    "url": "https://img.freepik.com/foto-gratis/composicion-deliciosa-cerveza-americana_23-2148907622.jpg?size=338&ext=jpg&ga=GA1.2.1123120206.1650681808"
+  },
+  {
+    "id": 2,
+    "estilo": "Imperial Pilsner",
+    "precio": "$2.00",
+    "stock": 10,
+    "tagline": "Bloggers' Imperial Pilsner.",
+    "url": "https://img.freepik.com/foto-gratis/close-up-cerveza-plato-sandwich-papas-fritas_176474-2426.jpg?size=338&ext=jpg&ga=GA1.2.1123120206.1650681808"
+  },
+  {
+    "id": 3,
+    "estilo": "Back IPA",
+    "precio": "$5.00",
+    "stock": 8,
+    "tagline": "Seasonal Black IPA.",
+    "url": "https://img.freepik.com/foto-gratis/arreglo-sabrosa-cerveza-americana_23-2148907583.jpg?size=338&ext=jpg&ga=GA1.2.1123120206.1650681808 "
+  },
+  {
+    "id": 4,
+    "estilo": "European Pale Lager",
+    "precio": "$5.00",
+    "stock": 8,
+    "tagline": "Unleash the Yeast Series.",
+    "url": "https://img.freepik.com/foto-gratis/vaso-oso-bistec-tomates_23-2148754943.jpg?size=338&ext=jpg&ga=GA1.2.1123120206.1650681808 "
+  }
 ]
-
-
-

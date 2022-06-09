@@ -1,54 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import ItemList from './ItemList';
 
-function ItemListContainer() {
 
-  const [estilos, setEstilos] = useState([]);
 
-  //. Usamos un useEffect para poder traer una promesa, un fetch o una API
+function ItemListContainer({onAdd, sumarCarrito}) {
+
+  const [estiloList, setEstiloList] = useState([])
+
   useEffect(() => {
-    const promesaProducto = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(
-          {
-            id: 0,
-            estilo: 'English Bitter',
-            precio: '$3.00',
-            stock: 8,
-            img_url:
-              'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-          },
-          {
-            id: 1,
-            estilo: 'Germand HeffeWeizen',
-            precio: '$2.00',
-            stock: 10,
-            img_url:
-              'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-          },
-          {
-            id: 2,
-            estilo: 'Imperial Stout',
-            precio: '$5.00',
-            stock: 8,
-            img_url:
-              'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-          }
-        );
-      }, 2000);
-    }, []);
+    setTimeout(() => { 
 
-    promesaProducto
-      .then((resultado) => {
-        setEstilos(resultado)
-        console.log(resultado)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-      .finally(() => {
-        console.log('Finalmente')
-      })
-    });
+    fetch("productos.json")
+    .then(resultado => resultado.json())
+    .then(resultado => setEstiloList(resultado))
+    .catch(error => console.log("Error", error))
+  }, 2000)
+},[])
+console.log(estiloList)
+
+    return (
+      <div className="d-flex justify-content-around align-items-center w-50 col-6">
+
+      <ItemList estilos={estiloList} onAdd={onAdd} sumarCarrito={sumarCarrito} />
+      
+      </div>
+    )
 }
-    
+
     export default ItemListContainer

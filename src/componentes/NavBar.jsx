@@ -2,11 +2,11 @@ import React from 'react';
 import '../style-sheet/NavBar.css';
 import CartWidget from './CartWidget.jsx';
 
-function NavBar() {
+function NavBar( {cantidad} ) {
     return (
     <nav className='navbar navbar-expand-lg navbar-light p-0 mx-0 bg-warning' id='menu'>
         <div className='container-fluid bg-warning p-1 m-0 d-flex mx-lg-0'>
-            <a className='navbar-brand mx-1 my-0' href='#'>
+            <a className='navbar-brand mx-1 my-0' href='asd'>
                 <span className='fs-1 titulo-logo md-4'>Eita!</span>
                 <span className='fw-light subtitulo-logo'>{' '}Club Exclusivo de Cerveza</span>
             </a>
@@ -39,7 +39,7 @@ function NavBar() {
                         <a className='nav-link' href='./pages/miCuenta.html'>{' '}Mi Cuenta</a>
                     </li>
                 </ul>
-                <CartWidget/>
+                <CartWidget cantidad={cantidad}/>
             </div>
         </div>
     </nav>
