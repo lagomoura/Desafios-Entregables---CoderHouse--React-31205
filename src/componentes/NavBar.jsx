@@ -1,4 +1,3 @@
-import React from 'react';
 import '../style-sheet/NavBar.css';
 import CartWidget from './CartWidget.jsx';
 
@@ -39,7 +38,8 @@ function NavBar( {cantidad} ) {
                         <a className='nav-link' href='./pages/miCuenta.html'>{' '}Mi Cuenta</a>
                     </li>
                 </ul>
-                <CartWidget cantidad={cantidad}/>
+                <CartWidget cantidad={cantidad} />
+
             </div>
         </div>
     </nav>

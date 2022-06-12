@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style-sheet/CartWidget.css';
 
+
 function CartWidget({cantidad}) {
     return (
         <div className='nav-cart'>

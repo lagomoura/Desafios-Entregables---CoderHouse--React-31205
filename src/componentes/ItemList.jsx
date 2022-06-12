@@ -1,14 +1,20 @@
-import React from 'react';
 import Item from './Item.jsx';
 
+//! Componente responsable de crear el listado de ITEMs. Usando las informaciones del componente ITEM, es hecho un mapeamento del objeto y luego retorna todos estos datos separados por props.
+
+//. Funcion para mapear el objeto. Retorna un array (estilos) con todos los datos de cada item. Cada dato de cada item es guardado en la variable estilo y luego podemos acceder a todos sus valores a traves del .valor.
 function ItemList({estilos, onAdd, sumarCarrito}){
 
     return(
-        <div className=" d-flex flex-wrap">
+        <>
+
+        <div className="d-flex">
         {estilos?.map((estilo)=>{
 
                 return <Item 
-                id={estilo.id} 
+                id={estilo.id}
+                precio500={estilo.precio500}
+                precio1000={estilo.precio1000}
                 estilo={estilo.estilo}
                 tagline={estilo.tagline}
                 imagen={estilo.url} 
@@ -17,10 +23,14 @@ function ItemList({estilos, onAdd, sumarCarrito}){
                 stock={estilo.stock}
                 initial={1}
                 max={estilo.stock}
-                agregarCantidad={sumarCarrito} />
+                agregarCantidad={sumarCarrito}
+                descripcion={estilo.descripcion}
+                abv={estilo.abv}
+                ibu={estilo.ibu} />
 
             })}
         </div>
+        </>
     )
 }
 
