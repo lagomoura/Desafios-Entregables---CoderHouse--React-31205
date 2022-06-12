@@ -13,8 +13,7 @@ function ItemList({estilos, onAdd, sumarCarrito}){
 
                 return <Item 
                 id={estilo.id}
-                precio500={estilo.precio500}
-                precio1000={estilo.precio1000}
+                precio={estilo.precio}
                 estilo={estilo.estilo}
                 tagline={estilo.tagline}
                 imagen={estilo.url} 

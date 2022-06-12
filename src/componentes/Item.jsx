@@ -6,7 +6,7 @@ import '../style-sheet/Item.css';
 
 
 //. Seteamos todos los estados iniciales
-function Item ({ initial, onAdd, max, agregarCantidad, estilo, imagen, tagline, descripcion, precio500}) {  
+function Item ({ initial, onAdd, max, agregarCantidad, estilo, imagen, tagline, descripcion, precio}) {  
 
   //. Estado de la cantidad y stock. Hago con que la cantidad default sea 1 y el stock default sea el max de cada item.
   const [cantidad, setCantidad] = useState(1);
@@ -99,7 +99,7 @@ function Item ({ initial, onAdd, max, agregarCantidad, estilo, imagen, tagline, 
                   <img src={imagen} className="card-img-top" alt="..." />
                   <div className="item_descripcion">
                     <p className='mt-3'> { descripcion } </p>
-                    <p className='fw-bold'> ${precio500},00</p>
+                    <p className='fw-bold'> ${precio},00</p>
                   </div>
                   <div className="d-flex gap-4 justify-content-center">
                       <button onClick={sumar} type="button" className=" btn btn-warning my-3">+</button>
