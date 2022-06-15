@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Toastify from 'toastify-js';
 import '../style-sheet/Item.css';
+import { Link } from 'react-router-dom';
 
 //! Componente responsable de la creacion de los items. Crea el item con los datos que le pasamos, vinculando al map del ItemList.
 
@@ -15,6 +16,7 @@ function Item({
 	tagline,
 	descripcion,
 	precio,
+	id,
 }) {
 	//. Estado de la cantidad y stock. Hago con que la cantidad default sea 1 y el stock default sea el max de cada item.
 	const [cantidad, setCantidad] = useState(initial);
@@ -139,11 +141,13 @@ function Item({
 									disabled={validarCantidad()}>
 									Agregar al Carrito
 								</button>
-								<button
-									type='button'
-									className='btn card-btn-cart bg-warning btn_detail rounded-pill mb-2 justify-content-center'>
-									Mas detalles
-								</button>
+								<Link to={`/producto/${id}`}>
+									<button
+										type='button'
+										className='btn card-btn-cart bg-warning btn_detail rounded-pill mb-2 justify-content-center'>
+										Mas detalles
+									</button>
+								</Link>
 							</div>
 							<span className='fw-bold'>Disponiblidad:</span>
 							<span> {stock} botellas </span>

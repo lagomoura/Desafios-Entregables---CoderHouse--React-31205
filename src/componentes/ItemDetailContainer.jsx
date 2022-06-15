@@ -1,43 +1,41 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';
+import {useParams} from 'react-router-dom';
 
 function ItemDetailContainer({ onAdd, sumarCarrito }) {
-	const { id } = useParams();
-
-	const [detalleProducto, setDetalleProducto] = useState({});
-
-	// const productoElegido = detalleProducto?.filter(
-	// 	(producto) => producto.id === 4
-	// );
-	console.log(id)
 
 
-	useEffect(() => {
-		const tomarDetalleProductos = () => {
-			fetch('./productos.json')
+	const [detalleProducto, setDetalleProducto] = useState();
+
+	const {id} = useParams()
+
+
+
+	useEffect(() => {	
+		fetch('../../productos.json')
 				.then((resultado) => resultado.json())
-				.then((resultado) => {
-					setDetalleProducto(resultado.find((item => item.id === id)));
-					setDetalleProducto(detalleProducto)
+				.then((data) => {
+					console.log(data)
+					setDetalleProducto(data.filter((item => item.id === id)));
+					console.log(detalleProducto)
 				})
 				.catch((error) => console.log('Error', error));
+
+		}
 				
-		};
-		setTimeout(() => {
-			tomarDetalleProductos();	
-		}, 2000);
-		
-	}, [id] );
-	
+		, [id]);
+
+
+	debugger
+
 	return (
 		<>
 			<div className='d-flex justify-content-center align-items-center'>
-				<ItemDetail
-					detalleProducto={detalleProducto}
-					onAdd={onAdd}
-					agregarCantidad={sumarCarrito}
-				/>
+				{
+					detalleProducto && (detalleProducto.map((item) => 
+						<ItemDetail id={item.id} estilo={item.estilo} nombre={item.nombre} tagline={item.tagline} url={item.url} descripcion={item.descripcion}  descripcion_complemento={item.descripcion_complemento} abv={item.abv} ibu={item.ibu} key={detalleProducto} />
+					))
+				}
 			</div>
 		</>
 	);

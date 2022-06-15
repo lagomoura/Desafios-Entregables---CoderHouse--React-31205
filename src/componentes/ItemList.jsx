@@ -11,6 +11,7 @@ function ItemList({ estiloList, onAdd, sumarCarrito, categoria }) {
 		resultadoFiltrado = estiloList.filter( item => item.categoria === categoria)
 	} else {
 		resultadoFiltrado = estiloList;
+		console.log('pase por aca')
 	}
 	return (
 		<>

@@ -1,15 +1,13 @@
 import '../style-sheet/ItemDetail.css';
 import ItemDetailCount from './ItemDetailCount.jsx';
 
-function ItemDetail({detalleProducto ,sumar,restar,agregarCantidad,onAdd,validarStock,sumarCarrito,}) {
-
-	const {id, nombre, estilo, tagline, url, descripcion, descripcion_complemento, abv, ibu} = detalleProducto;
+function ItemDetail({ id, nombre, estilo, tagline, url, descripcion, descripcion_complemento, abv, ibu, sumar,restar,agregarCantidad,onAdd,validarStock,sumarCarrito}) {
 
 
 	return (
 		<>
 
-					<div className='itemDetail' key={id}>
+					<div className='itemDetail' id={id}>
 						<div className='producto_titulo text-center mt-3'>
 							<h2>{nombre}</h2>
 						</div>
@@ -52,7 +50,7 @@ function ItemDetail({detalleProducto ,sumar,restar,agregarCantidad,onAdd,validar
 											initial={1}
 											validarStock={validarStock}
 											sumarCarrito={sumarCarrito}
-											key={estilo.id}
+											id={estilo.id}
 										/>
 									</div>
 								</div>

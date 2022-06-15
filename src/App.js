@@ -6,7 +6,7 @@ import NavBar from './componentes/NavBar';
 import TituloTienda from './componentes/TituloTienda';
 import Home from './componentes/Home.jsx';
 
-function App({ carrito, ale, lager }) {
+function App({ carrito }) {
 	//. el (:id) indica que es variable
 	return (
 		<BrowserRouter>
@@ -19,15 +19,16 @@ function App({ carrito, ale, lager }) {
 
 				<Route
 					path='/category/ale'
-					element={<ItemListContainer />}
-					categoria={ale}
+					element={<ItemListContainer categoria={"ale"} />}
+					
 				/>
 				<Route
 					path='/category/lager'
-					element={<ItemListContainer />}
-					categoria={lager}
+					element={<ItemListContainer categoria={"lager"} />}
+					
 				/>
 				<Route path='/producto/:id' element={<ItemDetailContainer />} />
+
 				<Route path='*' element={<Home />} />
 			</Routes>
 		</BrowserRouter>

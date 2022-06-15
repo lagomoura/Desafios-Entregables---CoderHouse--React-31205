@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Toastify from 'toastify-js';
 
-function ItemDetailCount({ detalleProducto, max, onAdd, precio, agregarCantidad, initial }) {
+function ItemDetailCount({ max, onAdd, precio, agregarCantidad, initial }) {
 	const [cantidadDetail, setCantidadDetail] = useState(initial);
 	const [valor, setValor] = useState(precio);
 	const [stock, setStock] = useState(max);
