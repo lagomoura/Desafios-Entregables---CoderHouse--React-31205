@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import Toastify from 'toastify-js';
 
-function ItemDetailCount({ max, onAdd, precio, agregarCantidad, initial }) {
-	const [cantidadDetail, setCantidadDetail] = useState(initial);
+function ItemCount({ max, onAdd, precio, agregarCantidad, initial, id }) {
+
+	const [cantidad, setCantidad] = useState(initial);
 	const [valor, setValor] = useState(precio);
 	const [stock, setStock] = useState(max);
 
 	const sumar = () => {
-		if (cantidadDetail < max) {
-			setCantidadDetail(cantidadDetail + 1);
-			setValor(precio * (cantidadDetail + 1));
+		if (cantidad < max) {
+			setCantidad(cantidad + 1);
+			setValor(precio * (cantidad + 1));
 		} else {
 			Toastify({
 				text: 'Stock insuficiente',
@@ -18,16 +19,16 @@ function ItemDetailCount({ max, onAdd, precio, agregarCantidad, initial }) {
 					background: 'linear-gradient(to right, #ffbd52, #fc9d39)',
 				},
 			}).showToast();
-			setCantidadDetail(cantidadDetail);
+			setCantidad(cantidad);
 			setValor(valor);
 		}
 	};
 
 	const restar = () => {
-		if (cantidadDetail > 1) {
-			setCantidadDetail(cantidadDetail - 1);
+		if (cantidad > 1) {
+			setCantidad(cantidad - 1);
 			setValor(precio);
-			setValor(precio * (cantidadDetail - 1));
+			setValor(precio * (cantidad - 1));
 		} else {
 			Toastify({
 				text: 'La cantidad debe ser mayor o igual a 1',
@@ -36,27 +37,27 @@ function ItemDetailCount({ max, onAdd, precio, agregarCantidad, initial }) {
 					background: 'linear-gradient(to right, #ffbd52, #fc9d39)',
 				},
 			}).showToast();
-			setCantidadDetail(cantidadDetail);
+			setCantidad(cantidad);
 			setValor(valor);
 		}
 	};
 
 	const restarStock = () => {
-		setStock(stock - cantidadDetail);
+		setStock(stock - cantidad);
 	};
 
 	const resetCantidad = () => {
-		setCantidadDetail(1);
+		setCantidad(1);
 	};
 
 	const validarCantidad = () => {
-		return cantidadDetail > stock;
+		return cantidad > stock;
 	};
 
 	const validarStock = () => {
 		restarStock();
-		onAdd(cantidadDetail);
-		agregarCantidad(cantidadDetail);
+		onAdd(cantidad);
+		agregarCantidad(cantidad);
 		resetCantidad();
 
 		if (stock === 0) {
@@ -76,7 +77,7 @@ function ItemDetailCount({ max, onAdd, precio, agregarCantidad, initial }) {
 				<button onClick={sumar} type='button' className='btn btn-warning my-3'>
 					+
 				</button>
-				<h2 className='fw-bold my-3'> {cantidadDetail} </h2>
+				<h2 className='fw-bold my-3'> {cantidad} </h2>
 				<button
 					onClick={restar}
 					type='button'
@@ -100,4 +101,4 @@ function ItemDetailCount({ max, onAdd, precio, agregarCantidad, initial }) {
 	);
 }
 
-export default ItemDetailCount;
+export default ItemCount;

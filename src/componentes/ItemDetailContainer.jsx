@@ -1,41 +1,38 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';
-import {useParams} from 'react-router-dom';
 
-function ItemDetailContainer({ onAdd, sumarCarrito }) {
-
-
+function ItemDetailContainer() {
 	const [detalleProducto, setDetalleProducto] = useState();
+	const { id } = useParams();
 
-	const {id} = useParams()
-
-
-
-	useEffect(() => {	
+	useEffect(() => {
 		fetch('../../productos.json')
-				.then((resultado) => resultado.json())
-				.then((data) => {
-					console.log(data)
-					setDetalleProducto(data.filter((item => item.id === id)));
-					console.log(detalleProducto)
-				})
-				.catch((error) => console.log('Error', error));
+			.then((resultado) => resultado.json())
+			.then((data) => {
+				setDetalleProducto(data.find((item) => item.id === id));
+			})
+			.catch((error) => console.log('Error', error));
 
-		}
-				
-		, [id]);
-
-
-	debugger
+		console.log(detalleProducto);
+	}, [id]);
 
 	return (
 		<>
 			<div className='d-flex justify-content-center align-items-center'>
-				{
-					detalleProducto && (detalleProducto.map((item) => 
-						<ItemDetail id={item.id} estilo={item.estilo} nombre={item.nombre} tagline={item.tagline} url={item.url} descripcion={item.descripcion}  descripcion_complemento={item.descripcion_complemento} abv={item.abv} ibu={item.ibu} key={detalleProducto} />
-					))
-				}
+				<ItemDetail
+					id={detalleProducto.id}
+					precio={detalleProducto.precio}
+					estilo={detalleProducto.estilo}
+					nombre={detalleProducto.nombre}
+					tagline={detalleProducto.tagline}
+					url={detalleProducto.url}
+					descripcion={detalleProducto.descripcion}
+					descripcion_complemento={detalleProducto.descripcion_complemento}
+					abv={detalleProducto.abv}
+					ibu={detalleProducto.ibu}
+					categoria={detalleProducto.categoria}
+				/>
 			</div>
 		</>
 	);

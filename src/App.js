@@ -6,32 +6,39 @@ import NavBar from './componentes/NavBar';
 import TituloTienda from './componentes/TituloTienda';
 import Home from './componentes/Home.jsx';
 
-function App({ carrito }) {
+
+
+function App() {
+
+
 	//. el (:id) indica que es variable
 	return (
-		<BrowserRouter>
-			<NavBar cantidad={carrito} />
-			<TituloTienda />
+			<BrowserRouter>
 
-			<Routes>
-				<Route path='/' element={<ItemListContainer />} />
-				<Route path='/home' element={<ItemListContainer />} />
+				<NavBar />
+				<TituloTienda />
 
-				<Route
-					path='/category/ale'
-					element={<ItemListContainer categoria={"ale"} />}
-					
-				/>
-				<Route
-					path='/category/lager'
-					element={<ItemListContainer categoria={"lager"} />}
-					
-				/>
-				<Route path='/producto/:id' element={<ItemDetailContainer />} />
+				<Routes>
 
-				<Route path='*' element={<Home />} />
-			</Routes>
-		</BrowserRouter>
+					<Route path='/' element={<ItemListContainer />}  />
+					<Route path='/home' element={<ItemListContainer />} />
+					<Route
+						path='/category/:categoria'
+						element={<ItemListContainer />}
+			
+					/>
+					<Route
+						path='/category/:categoria'
+						element={<ItemListContainer	/>}
+			
+					/>
+					<Route path='/producto/:id' element={<ItemDetailContainer />} />
+
+					<Route path='*' element={<Home />} />
+
+				</Routes>
+				
+			</BrowserRouter>
 	);
 }
 
