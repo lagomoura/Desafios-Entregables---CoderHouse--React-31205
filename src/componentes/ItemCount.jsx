@@ -2,11 +2,27 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Toastify from 'toastify-js';
 
-function ItemCount({ max, precio, initial, id, onAdd, agregarCantidad }) {
+function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 	const [cantidad, setCantidad] = useState(initial);
 	const [valor, setValor] = useState(precio);
 	const [stock, setStock] = useState(max);
-	const [cantidadCarrito, setCantidadCarrito] = useState(0);
+
+	const onAdd = (cantidad) => {
+
+		Toastify({
+			text: `${cantidad} Items Agregados`,
+			duration: 2000,
+			newWindow: true,
+			close: true,
+			gravity: 'top', // `top` or `bottom`
+			position: 'left', // `left`, `center` or `right`
+			stopOnFocus: true, // Prevents dismissing of toast on hover
+			style: {
+				background: 'linear-gradient(to right, #ffbd52, #fc9d39)',
+			},
+		}).showToast();
+	};
+
 
 	const sumar = () => {
 		if (cantidad < max) {
@@ -50,7 +66,7 @@ function ItemCount({ max, precio, initial, id, onAdd, agregarCantidad }) {
 	};
 
 	const resetCantidad = () => {
-		setCantidad(1);
+		setCantidad(initial);
 	};
 
 	const validarCantidad = () => {
@@ -60,8 +76,6 @@ function ItemCount({ max, precio, initial, id, onAdd, agregarCantidad }) {
 	const validarStock = () => {
 		restarStock();
 		onAdd(cantidad);
-		setCantidadCarrito(cantidadCarrito)
-		agregarCantidad(cantidadCarrito);
 		resetCantidad();
 	};
 
@@ -92,20 +106,10 @@ function ItemCount({ max, precio, initial, id, onAdd, agregarCantidad }) {
 						disabled={validarCantidad()}
 						onClick={() => {
 							validarStock();
-							setCantidadCarrito(cantidadCarrito + cantidad);
-							console.log(cantidadCarrito);
-
 						}}>
 						Agregar al Carrito
 					</button>
-
-					{cantidadCarrito > 0 && (
-						<Link
-							className='btn card-btn-cart my-1 bg-warning rounded-pill'
-							to={`/carrito`}>
-							Finalizar Compra
-						</Link>
-					)}
+						<p className='fw-bold'> Disponibilidad {stock} botellas</p>
 				</div>
 			</div>
 		</>

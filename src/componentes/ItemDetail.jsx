@@ -12,8 +12,7 @@ function ItemDetail({ detalleProducto }) {
 		descripcion_complemento,
 		abv,
 		ibu,
-		initial,
-		max,
+    stock,
 		onAdd,
 		precio,
 		agregarCantidad,} = detalleProducto;
@@ -22,7 +21,7 @@ function ItemDetail({ detalleProducto }) {
 
 	return (
 		<>
-			<div className='itemDetail' id={id}>
+			<div className='itemDetail' key={id}>
 				<div className='producto_titulo text-center mt-3'>
 					<h2>{nombre}</h2>
 				</div>
@@ -54,8 +53,8 @@ function ItemDetail({ detalleProducto }) {
 								<ItemCount
 									precio={precio}
 									id={id}
-									initial={initial}
-									max={max}
+									initial={1}
+									max={stock}
 									onAdd={onAdd}
 									agregarCantidad={agregarCantidad}
 								/>

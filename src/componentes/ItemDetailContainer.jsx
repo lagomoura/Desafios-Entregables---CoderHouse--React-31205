@@ -10,12 +10,7 @@ function ItemDetailContainer() {
 		fetch('../../productos.json')
 			.then((resultado) => resultado.json())
 			.then((resultado) => {
-				setDetalleProducto(resultado);
-				if (id !== undefined) {
-					setDetalleProducto(resultado.filter(item => item.id == id));
-				} else {
-					setDetalleProducto(resultado);
-				}
+				setDetalleProducto(resultado.find(item => item.id == id));
 			})
 			.catch((error) => console.log('Error', error));
 
