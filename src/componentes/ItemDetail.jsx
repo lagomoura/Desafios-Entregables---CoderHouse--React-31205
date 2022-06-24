@@ -1,22 +1,28 @@
 import '../style-sheet/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 
-function ItemDetail({
-	id,
-	precio,
-	nombre,
-	estilo,
-	tagline,
-	url,
-	descripcion,
-	descripcion_complemento,
-	abv,
-	ibu,
-	categoria,
-}) {
+function ItemDetail({ detalleProducto }) {
+
+	const {	nombre,
+		id,
+		estilo,
+		tagline,
+		url,
+		descripcion,
+		descripcion_complemento,
+		abv,
+		ibu,
+		initial,
+		max,
+		onAdd,
+		precio,
+		agregarCantidad,} = detalleProducto;
+
+
+
 	return (
 		<>
-			<div className='itemDetail' id={id} castegoria={categoria}>
+			<div className='itemDetail' id={id}>
 				<div className='producto_titulo text-center mt-3'>
 					<h2>{nombre}</h2>
 				</div>
@@ -45,7 +51,14 @@ function ItemDetail({
 								<button className='btn btn-warning m-2'>1000ml</button>
 							</div>
 							<div className='count'>
-								<ItemCount precio={precio} id={id} />
+								<ItemCount
+									precio={precio}
+									id={id}
+									initial={initial}
+									max={max}
+									onAdd={onAdd}
+									agregarCantidad={agregarCantidad}
+								/>
 							</div>
 						</div>
 					</div>

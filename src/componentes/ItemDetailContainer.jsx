@@ -3,36 +3,28 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.jsx';
 
 function ItemDetailContainer() {
-	const [detalleProducto, setDetalleProducto] = useState();
+	const [detalleProducto, setDetalleProducto] = useState([]);
 	const { id } = useParams();
 
 	useEffect(() => {
 		fetch('../../productos.json')
 			.then((resultado) => resultado.json())
-			.then((data) => {
-				setDetalleProducto(data.find((item) => item.id === id));
+			.then((resultado) => {
+				setDetalleProducto(resultado);
+				if (id !== undefined) {
+					setDetalleProducto(resultado.filter(item => item.id == id));
+				} else {
+					setDetalleProducto(resultado);
+				}
 			})
 			.catch((error) => console.log('Error', error));
 
-		console.log(detalleProducto);
 	}, [id]);
 
 	return (
 		<>
 			<div className='d-flex justify-content-center align-items-center'>
-				<ItemDetail
-					id={detalleProducto.id}
-					precio={detalleProducto.precio}
-					estilo={detalleProducto.estilo}
-					nombre={detalleProducto.nombre}
-					tagline={detalleProducto.tagline}
-					url={detalleProducto.url}
-					descripcion={detalleProducto.descripcion}
-					descripcion_complemento={detalleProducto.descripcion_complemento}
-					abv={detalleProducto.abv}
-					ibu={detalleProducto.ibu}
-					categoria={detalleProducto.categoria}
-				/>
+				<ItemDetail detalleProducto={detalleProducto} id={id}/> 
 			</div>
 		</>
 	);

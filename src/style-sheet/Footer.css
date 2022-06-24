@@ -1,0 +1,29 @@
+.menu-footer,
+ul {
+	list-style: none;
+}
+
+.menu-footer,
+a {
+	color: #000;
+	font-family: 'Roboto Slab', serif;
+	text-decoration: none;
+	font-size: 0.8rem;
+	font-weight: bold;
+	transition: color 0.5s;
+}
+
+.menu-footer:hover {
+	color: #999;
+}
+
+.redes-logo,
+i {
+	font-size: 2rem;
+	color: #000;
+	transition: color 0.5s;
+}
+
+.redes-logo:hover {
+	color: #999;
+}

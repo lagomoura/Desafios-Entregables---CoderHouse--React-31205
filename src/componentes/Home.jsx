@@ -5,7 +5,9 @@ import ItemDetailContainer from './ItemDetailContainer.jsx';
 import '../style-sheet/NavBar.css'
 
 function Home() {
+
 	const onAdd = (cantidad) => {
+
 		Toastify({
 			text: `${cantidad} Items Agregados`,
 			duration: 2000,
@@ -44,7 +46,7 @@ function Home() {
 					<ItemListContainer onAdd={onAdd} sumarCarrito={sumarCarrito} />
 				</div>
 			</div>
-			<div class='row'>
+			<div className='row'>
 				<ItemDetailContainer onAdd={onAdd} sumarCarrito={sumarCarrito} />
 			</div>
 		</div>
