@@ -26,11 +26,11 @@ function Home() {
 			</div>
 			<div>
 				<div className='row'>
-					<ItemListContainer sumarCarrito={sumarCarrito} />
+					<ItemListContainer />
 				</div>
 			</div>
 			<div className='row'>
-				<ItemDetailContainer sumarCarrito={sumarCarrito} />
+				<ItemDetailContainer />
 			</div>
 		</div>
 	);

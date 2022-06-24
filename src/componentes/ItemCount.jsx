@@ -6,6 +6,7 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 	const [cantidad, setCantidad] = useState(initial);
 	const [valor, setValor] = useState(precio);
 	const [stock, setStock] = useState(max);
+	const [cantidadCarrito, setCantidadCarrito] = useState(0);
 
 	const onAdd = (cantidad) => {
 
@@ -79,6 +80,10 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 		resetCantidad();
 	};
 
+	const agregarAlCarrito = () => {
+		setCantidadCarrito(cantidad)
+	}
+
 	return (
 		<>
 			<div className='producto-detail' key={id}>
@@ -106,10 +111,18 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 						disabled={validarCantidad()}
 						onClick={() => {
 							validarStock();
+							agregarAlCarrito();
+							// agregarCantidad(cantidadCarrito);
 						}}>
 						Agregar al Carrito
 					</button>
-						<p className='fw-bold'> Disponibilidad {stock} botellas</p>
+					{cantidadCarrito >= 1 && (
+						<Link to='/cart' className='btn card-btn-cart my-1 bg-dark text-warning rounded-pill'> 
+							Finalizar mi compra
+						</Link>
+					)}
+					
+						<p className='fw-bold'> Disponibilidad: {stock} botellas</p>
 				</div>
 			</div>
 		</>

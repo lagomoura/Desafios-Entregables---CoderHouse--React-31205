@@ -29,7 +29,7 @@ function ItemListContainer() {
 	return (
 		//. Retorno un componente ItemList con los datos del estado estiloList. Asignamos estiloList al array estilos de ItemList.
 		<>
-			<div className='d-flex justify-content-around align-items-center'>
+			<div className='d-flex justify-content-start align-items-center'>
 				
 				<ItemList estiloList={estiloList} categoria={categoria}/>
 			</div>
