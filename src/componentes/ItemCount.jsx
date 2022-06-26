@@ -96,6 +96,7 @@ function ItemCount({
 
 	return (
 		<>
+	
 			<div className='producto-detail' key={id}>
 				<div className='producto_Detail_Precio'>
 					<p className='text-center fw-bold mt-3 fs-4'>${valor},00</p>
