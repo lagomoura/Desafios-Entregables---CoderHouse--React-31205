@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import '../style-sheet/ItemDetail.css';
 import ItemCount from './ItemCount.jsx';
 
 function ItemDetail({ detalleProducto }) {
+	
+	const [cantidad, setCantidad] = useState(1);
 
-	const {	nombre,
+	const {
+		nombre,
 		id,
 		estilo,
 		tagline,
@@ -12,12 +16,9 @@ function ItemDetail({ detalleProducto }) {
 		descripcion_complemento,
 		abv,
 		ibu,
-    stock,
-		onAdd,
+		stock,
 		precio,
-		agregarCantidad,} = detalleProducto;
-
-
+	} = detalleProducto;
 
 	return (
 		<>
@@ -55,8 +56,9 @@ function ItemDetail({ detalleProducto }) {
 									id={id}
 									initial={1}
 									max={stock}
-									onAdd={onAdd}
-									agregarCantidad={agregarCantidad}
+									cantidad={cantidad}
+									setCantidad={setCantidad}
+									detalleProducto={detalleProducto}
 								/>
 							</div>
 						</div>

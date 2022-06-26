@@ -5,22 +5,23 @@ import '../style-sheet/Item.css';
 
 //. Seteamos todos los estados iniciales
 function Item({
-	estilo,
+	nombre,
 	imagen,
-	tagline,
+	estilo,
 	descripcion,
 	precio,
 	id,
 	stock,
+	categoria
 }) {
 	return (
 		<>
-			<div className='row' key={id}>
+			<div className='row' key={id} categoria={categoria}>
 				<div className='container-fluid'>
 					<div className='cardProductos m-3 d-flex'>
 						<div className='card-body text-center mt-3'>
-							<h5 className='card-title fw-bolder'> {estilo} </h5>
-							<p className='card-text'> {tagline} </p>
+							<h5 className='card-title fw-bolder'> {nombre} </h5>
+							<p className='card-text'> {estilo} </p>
 							<img src={imagen} className='card-img-top' alt='...' />
 							<div className='item_descripcion'>
 								<p className='mt-3'> {descripcion} </p>

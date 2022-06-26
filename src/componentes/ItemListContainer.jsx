@@ -16,22 +16,23 @@ function ItemListContainer() {
 				setEstiloList(resultado);
 
 				if (categoria !== undefined) {
-					setEstiloList(resultado.filter(item => item.categoria === categoria)); //. Filtra el array de estilos por la categoria que se le pasa por parametro.
+					setEstiloList(
+						resultado.filter((item) => item.categoria === categoria)
+					); //. Filtra el array de estilos por la categoria que se le pasa por parametro.
 				} else {
 					setEstiloList(resultado);
 				}
 			})
 			.catch((error) => {
 				console.log('Error', error);
-			});	
+			});
 	}, [categoria]);
 
 	return (
 		//. Retorno un componente ItemList con los datos del estado estiloList. Asignamos estiloList al array estilos de ItemList.
 		<>
-			<div className='d-flex justify-content-start align-items-center'>
-				
-				<ItemList estiloList={estiloList} categoria={categoria}/>
+			<div className='d-flex justify-content-center align-items-center'>
+				<ItemList estiloList={estiloList} categoria={categoria} />
 			</div>
 			)
 		</>

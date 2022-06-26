@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Toastify from 'toastify-js';
+import { MiContexto } from './context/CartContextProvider';
 
-function ItemCount({ max, precio, initial, id, agregarCantidad }) {
-	const [cantidad, setCantidad] = useState(initial);
+function ItemCount({
+	cantidad,
+	setCantidad,
+	precio,
+	max,
+	id,
+	detalleProducto,
+}) {
 	const [valor, setValor] = useState(precio);
 	const [stock, setStock] = useState(max);
 	const [cantidadCarrito, setCantidadCarrito] = useState(0);
 
-	const onAdd = (cantidad) => {
+	const { estaEnCarrito, addItemCarrito } = useContext(MiContexto);
+
+	const onAdd = () => {
+		estaEnCarrito(id);
+
 
 		Toastify({
 			text: `${cantidad} Items Agregados`,
@@ -23,7 +34,6 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 			},
 		}).showToast();
 	};
-
 
 	const sumar = () => {
 		if (cantidad < max) {
@@ -67,7 +77,7 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 	};
 
 	const resetCantidad = () => {
-		setCantidad(initial);
+		setCantidad(1);
 	};
 
 	const validarCantidad = () => {
@@ -76,13 +86,13 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 
 	const validarStock = () => {
 		restarStock();
-		onAdd(cantidad);
+		onAdd();
 		resetCantidad();
 	};
 
 	const agregarAlCarrito = () => {
-		setCantidadCarrito(cantidad)
-	}
+		setCantidadCarrito(cantidad);
+	};
 
 	return (
 		<>
@@ -111,18 +121,20 @@ function ItemCount({ max, precio, initial, id, agregarCantidad }) {
 						disabled={validarCantidad()}
 						onClick={() => {
 							validarStock();
-							agregarAlCarrito();
-							// agregarCantidad(cantidadCarrito);
+							agregarAlCarrito(cantidad);
+							addItemCarrito(detalleProducto, cantidad);
 						}}>
 						Agregar al Carrito
 					</button>
 					{cantidadCarrito >= 1 && (
-						<Link to='/cart' className='btn card-btn-cart my-1 bg-dark text-warning rounded-pill'> 
+						<Link
+							to='/cart'
+							className='btn card-btn-cart my-1 bg-dark text-warning rounded-pill'>
 							Finalizar mi compra
 						</Link>
 					)}
-					
-						<p className='fw-bold'> Disponibilidad: {stock} botellas</p>
+
+					<p className='fw-bold'> Disponibilidad: {stock} botellas</p>
 				</div>
 			</div>
 		</>

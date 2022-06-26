@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import '../style-sheet/NavBar.css';
 import CartWidget from './CartWidget.jsx';
 
-function NavBar({ cantidad, categoria }) {
+
+
+function NavBar() {
 	return (
 		<nav
 			className='navbar navbar-expand-lg navbar-light p-0 mx-0 bg-warning'
@@ -71,7 +73,7 @@ function NavBar({ cantidad, categoria }) {
 							</Link>
 							<ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
 								<li>
-									<Link className='dropdown-item' to={`/categoria/${categoria}`} >
+									<Link className='dropdown-item' to={`/categoria/ale`} >
 										Ales
 									</Link>
 								</li>
@@ -79,7 +81,7 @@ function NavBar({ cantidad, categoria }) {
 									<hr className='dropdown-divider' />
 								</li>
 								<li>
-									<Link className='dropdown-item' to={`/categoria/${categoria}`}>
+									<Link className='dropdown-item' to={`/categoria/lager`}>
 										Lagers
 									</Link>
 								</li>
@@ -93,7 +95,7 @@ function NavBar({ cantidad, categoria }) {
 							</Link>
 						</li>
 					</ul>
-					<CartWidget cantidad={cantidad} />
+					<CartWidget />
 				</div>
 			</div>
 		</nav>

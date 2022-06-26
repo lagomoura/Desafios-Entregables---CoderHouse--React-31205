@@ -5,17 +5,11 @@ import '../style-sheet/NavBar.css'
 
 function Home() {
 
-	const [carrito, setCarrito] = useState(0);
-
-	const sumarCarrito = (cantidad) => {
-		setCarrito(carrito + cantidad);
-	};
-
 	return (
 		<div>
 			<div className='container-fluid'>
 				<div className='row d-flex justify-content-center m-2'>
-					<div className='col-12 mt-5 text-center'>
+					<div className='col-12 col-md-4 mt-5 text-center'>
 						{' '}
 						<h2>
 							Bievenidos a <span className='titulo-logo'>Eita!</span>{' '}
