@@ -17,7 +17,7 @@ function CartWidget() {
 					/>
 				</Link>
 				<span className='badge badge-danger' id='lblCartCount'>
-					{cantidadCarrito}
+					{cantidadCarrito()}
 				</span>
 			</div>
 		</>

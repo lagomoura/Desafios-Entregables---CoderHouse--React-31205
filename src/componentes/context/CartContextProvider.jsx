@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 import { useState } from 'react';
 
-export const MiContexto = createContext({});
+export const MiContexto = createContext();
 
 const { Provider } = MiContexto;
 
