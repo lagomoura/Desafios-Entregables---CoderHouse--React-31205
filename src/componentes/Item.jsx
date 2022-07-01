@@ -28,7 +28,7 @@ function Item({
 								<p className='mt-3 fw-bold fs-5'> ${precio},00 </p>
 							</div>
 							<div className='d-flex gap-3 justify-content-center align-items-center mt-1 flex-column'>
-								<Link to={`/producto/`+ id}>
+								<Link to={`/producto/${id}`}>
 									<button
 										type='button'
 										className='btn card-btn-cart bg-warning btn_detail rounded-pill mb-2 justify-content-center'>

@@ -1,4 +1,4 @@
-//cje
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Carrito from './componentes/Carrito';

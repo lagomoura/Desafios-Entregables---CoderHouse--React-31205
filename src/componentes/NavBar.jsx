@@ -73,7 +73,7 @@ function NavBar() {
 							</Link>
 							<ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
 								<li>
-									<Link className='dropdown-item' to={`/categoria/ale`} >
+									<Link className='dropdown-item' to="/categoria/ale" >
 										Ales
 									</Link>
 								</li>
@@ -81,7 +81,7 @@ function NavBar() {
 									<hr className='dropdown-divider' />
 								</li>
 								<li>
-									<Link className='dropdown-item' to={`/categoria/lager`}>
+									<Link className='dropdown-item' to="/categoria/lager">
 										Lagers
 									</Link>
 								</li>
