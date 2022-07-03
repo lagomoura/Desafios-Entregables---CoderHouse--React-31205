@@ -28,7 +28,7 @@ function ItemListContainer() {
 			getDocs(q)
 				.then((resultado) => {
 					setEstiloList(
-						resultado.docs.map((doc) => ({ ...doc.data(), id: doc.categoria }))
+						resultado.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 					);
 				})
 				.catch((error) => {
@@ -39,7 +39,7 @@ function ItemListContainer() {
 			getDocs(productosCollection)
 				.then((resultado) => {
 					setEstiloList(
-						resultado.docs.map((doc) => ({ ...doc.data(), id: doc.categoria }))
+						resultado.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 					);
 				})
 				.catch((error) => {
