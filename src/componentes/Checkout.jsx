@@ -133,7 +133,7 @@ export default function Checkout() {
 				</div>
 			) : (
 				<div
-					className='container d-flex justify-content-start pt-5 flex-column align-items-center'
+					className='container d-flex justify-content-start pt-5 flex-column align-items-center gracias-compra'
 					id='orderForm'>
 					<h2 className='text-warning'>Muchas gracias por su compra!!</h2>
 					<p className='mt-2'>
@@ -141,7 +141,7 @@ export default function Checkout() {
 					</p>
 					<p>ID de compra: {orderId}</p>
 					<Link to='/home'>
-						<button className='btn radius-50 bg-warning mt-3'>
+						<button className='btn radius-50 bg-warning m-3'>
 							Volver a Inicio
 						</button>
 					</Link>

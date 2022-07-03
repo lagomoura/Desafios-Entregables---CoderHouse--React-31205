@@ -9,6 +9,7 @@ import ItemDetailContainer from './componentes/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/NavBar';
 import TituloTienda from './componentes/TituloTienda';
+import Checkout from './componentes/Checkout';
 
 function App() {
 	//. el (:id) indica que es variable
@@ -28,6 +29,8 @@ function App() {
 					<Route path='/producto/:id' element={<ItemDetailContainer />} />
 
 					<Route path='/cart' element={<Carrito />} />
+
+					<Route path='cart/checkout' element={<Checkout />} />
 
 					<Route path='*' element={<Home />} />
 				</Routes>

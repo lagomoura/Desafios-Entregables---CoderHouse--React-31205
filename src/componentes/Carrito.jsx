@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { MiContexto } from './context/CartContextProvider';
-function Carrito({ children, initial } ) {
+function Carrito({ children, initial }) {
 	const { cart, valorTotalCarrito, removerItemCarrito } =
 		useContext(MiContexto);
 
@@ -46,11 +46,11 @@ function Carrito({ children, initial } ) {
 															</div>
 															<div className='col-md-3 col-lg-3 col-xl-2 d-flex'>
 																{/* <button className='btn btn-link px-2 bg-warning'>
-																	<i className='fas fa-minus' />
-																</button> */}
-                                <div className='cantidadProducto p-3'>
-                                  <p>Cantidad: {producto.cantidad}</p> 
-                                </div>
+                                    <i className='fas fa-minus' />
+                                  </button> */}
+																<div className='cantidadProducto p-3'>
+																	<p>Cantidad: {producto.cantidad}</p>
+																</div>
 																{/* <button className='btn btn-link px-2 bg-warning'>
 																	<i className='fas fa-plus' />
 																</button> */}
@@ -87,11 +87,13 @@ function Carrito({ children, initial } ) {
 							</p>
 						</div>
 						<div className='btnComprar'>
-							<button
-								type='button'
-								className='btn btn-warning btn-block btn-lg'>
-								Terminar mi compra
-							</button>
+							<Link to='/cart/checkout'>
+								<button
+									type='button'
+									className='btn btn-warning btn-block btn-lg'>
+									Terminar mi compra
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>
