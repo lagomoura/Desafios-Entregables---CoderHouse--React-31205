@@ -26,7 +26,7 @@ export default function Checkout() {
 		};
 
 		//= Obliga a todos los campos estaren completados
-		if (!name || !email || !phone) {
+		if (!name || !email) {
 			return Toastify({
 				text: `Por favor, completar todos los campos`,
 				duration: 2000,
@@ -57,8 +57,21 @@ export default function Checkout() {
 					background: 'linear-gradient(to right, #ffbd52, #fc9d39)',
 				},
 			}).showToast();
+		} else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+			Toastify({
+				text: `Por favor, agregar un email valido.`,
+				duration: 2000,
+				newWindow: true,
+				close: true,
+				gravity: 'top', // `top` or `bottom`
+				position: 'center', // `left`, `center` or `right`
+				stopOnFocus: true, // Prevents dismissing of toast on hover
+				style: {
+					background: 'linear-gradient(to right, #ffbd52, #fc9d39)',
+				},
+			}).showToast();
+			return;
 		}
-		// console.log(order);
 
 		addDoc(orderCollection, order).then(({ id }) => {
 			setOrderId(id);
@@ -91,7 +104,7 @@ export default function Checkout() {
 					<div className='formulario container d-flex justify-content-center align-items-center pt-5'>
 						<form>
 							<div className='mb-1'>
-								<label className='form-label text-warning'>Nombre</label>
+								<label className='form-label text-warning'>Nombre *</label>
 								<input
 									onChange={(e) => setName(e.target.value)}
 									placeholder='Ingrese su nombre'
@@ -109,7 +122,7 @@ export default function Checkout() {
 								/>
 							</div>
 							<div className='mb-3'>
-								<label className='form-label text-warning'>Email</label>
+								<label className='form-label text-warning'>Email *</label>
 								<input
 									onChange={(e) => setEmail(e.target.value)}
 									placeholder='Ingrese su email'

@@ -2,6 +2,8 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Toastify from 'toastify-js';
 import { MiContexto } from './context/CartContextProvider';
+import {IoIosBeer} from 'react-icons/io';
+import '../style-sheet/ItemCount.css'
 
 function ItemCount({
 	cantidad,
@@ -118,14 +120,15 @@ function ItemCount({
 				</div>
 				<div className='btn_agregarCarrito d-flex flex-column'>
 					<button
-						className='btn card-btn-cart my-3 bg-warning rounded-pill'
+						className='btn bg-warning btn-unite text-capitalize m-2 text-dark'
 						disabled={validarCantidad()}
 						onClick={() => {
 							validarStock();
 							agregarAlCarrito(cantidad);
 							addItemCarrito(detalleProducto, cantidad);
 						}}>
-						Agregar al Carrito
+						<span className='text-dark'>Add Carrito</span> 
+						<div className="liquid"></div>
 					</button>
 					{cantidadCarrito >= 1 && (
 						<Link
@@ -135,7 +138,7 @@ function ItemCount({
 						</Link>
 					)}
 
-					<p className='fw-bold'> Disponibilidad: {stock} botellas</p>
+					<p className='fw-bold'> Disponibilidad: {stock} botellas <IoIosBeer /></p>
 				</div>
 			</div>
 		</>

@@ -13,6 +13,7 @@ function ItemListContainer() {
 	//. Guardo el estado del estilo en un array
 
 	const [estiloList, setEstiloList] = useState([]);
+	const [loading, setLoading] = useState(true);
 	const { categoria } = useParams();
 
 	//= Cuando el componente se monta, se ejecuta el useEffect. Es una manera de informar que va a ser ejecutado una vez que el componente se monta.
@@ -20,9 +21,9 @@ function ItemListContainer() {
 		//= Obtengo la referencia a la base de datos
 		const db = getFirestore();
 		const productosCollection = collection(db, 'producto');
-
 		//= Filtramos por categoria, caso el useParams Categoria exista.
 		if (categoria) {
+			setLoading(true);
 			const q = query(productosCollection, where('categoria', '==', categoria));
 
 			getDocs(q)
@@ -30,6 +31,7 @@ function ItemListContainer() {
 					setEstiloList(
 						resultado.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 					);
+					setLoading(false);
 				})
 				.catch((error) => {
 					console.log(error);
@@ -38,10 +40,13 @@ function ItemListContainer() {
 			//= Caso el useParams Categoria no exista, simplemente trae toda la coleccion de objetos.
 			getDocs(productosCollection)
 				.then((resultado) => {
+					setLoading(true);
 					setEstiloList(
 						resultado.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 					);
+					setLoading(false);
 				})
+
 				.catch((error) => {
 					console.log(error);
 				});
@@ -52,9 +57,15 @@ function ItemListContainer() {
 	return (
 		//. Retorno un componente ItemList con los datos del estado estiloList. Asignamos estiloList al array estilos de ItemList.
 		<>
-			<div className='d-flex justify-content-center align-items-center'>
-				<ItemList estiloList={estiloList} />
-			</div>
+			{loading ? (
+				<div className='loading-page'>
+					<h2 className='text-warning text-center titulo-logo'>Cargando...</h2>
+				</div>
+			) : (
+						<div>
+							<ItemList estiloList={estiloList} />
+						</div>
+			)}
 		</>
 	);
 }

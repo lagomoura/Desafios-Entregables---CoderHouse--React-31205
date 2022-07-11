@@ -22,7 +22,7 @@ function ItemDetail({ detalleProducto }) {
 
 	return (
 		<>
-			<div className='itemDetail' key={id}>
+			<div className='itemDetail container-fluid' key={id}>
 				<div className='producto_titulo text-center mt-3'>
 					<h2>{nombre}</h2>
 				</div>
@@ -48,7 +48,7 @@ function ItemDetail({ detalleProducto }) {
 							</p>
 							<div className='btn_litros'>
 								<button className='btn btn-warning m-2'>500ml</button>
-								<button className='btn btn-warning m-2'>1000ml</button>
+								<button title='sin stock' className='btn btn-warning m-2 bg-muted btn-1000'>1000ml</button>
 							</div>
 							<div className='count'>
 								<ItemCount

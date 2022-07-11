@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { MiContexto } from './context/CartContextProvider';
+import '../style-sheet/Carrito.css';
 function Carrito({ children, initial }) {
 	const { cart, valorTotalCarrito, removerItemCarrito } =
 		useContext(MiContexto);
@@ -66,7 +67,7 @@ function Carrito({ children, initial }) {
 																		onClick={() => {
 																			removerItemCarrito(producto.id);
 																		}}
-																		className='fas fa-trash fa-lg bg-warning p-3'
+																		className='fas fa-trash fa-lg bg-warning p-3 rounded basurita'
 																	/>
 																</a>
 															</div>
@@ -90,8 +91,9 @@ function Carrito({ children, initial }) {
 							<Link to='/cart/checkout'>
 								<button
 									type='button'
-									className='btn btn-warning btn-block btn-lg'>
-									Terminar mi compra
+									className='btn bg-warning text-capitalize btn-block m-3 rounded'>
+									Terminar Compra
+                  <div className="liquid"></div>	
 								</button>
 							</Link>
 						</div>

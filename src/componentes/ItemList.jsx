@@ -8,7 +8,7 @@ function ItemList({ estiloList, onAdd, categoria }) {
 
 	return (
 		<>
-			<div className='d-flex'>
+			<div className='container col-sm-12 col-lg-12 d-flex flex-row justify-content-around flex-wrap'>
 				{estiloList?.map((estilo) => {
 					return (
 						<Item

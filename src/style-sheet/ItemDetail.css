@@ -6,3 +6,11 @@
     max-width: 340px;
 
 }
+
+.img-card {
+    transition: opacity 0.5s;
+}
+
+.img-card:hover {
+    opacity: 0.8;
+}

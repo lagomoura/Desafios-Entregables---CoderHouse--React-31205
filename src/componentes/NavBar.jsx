@@ -51,18 +51,6 @@ function NavBar() {
 								Unite
 							</Link>
 						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='./pages/calendarioEstilos.html'>
-								{' '}
-								Calendario de Estilos
-							</Link>
-						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='#footer'>
-								{' '}
-								Contacto
-							</Link>
-						</li>
 						<li className='nav-item dropdown'>
 							<Link
 								className='nav-link dropdown-toggle'
@@ -86,13 +74,6 @@ function NavBar() {
 									</Link>
 								</li>
 							</ul>
-						</li>
-
-						<li className='nav-item'>
-							<Link className='nav-link' to='./pages/miCuenta.html'>
-								{' '}
-								Mi Cuenta
-							</Link>
 						</li>
 					</ul>
 					<CartWidget />

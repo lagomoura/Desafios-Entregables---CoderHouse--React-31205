@@ -1,22 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	max-width: 100vw;
-}
-
-.cardProductos {
-	width: 18rem;
-}
-
-.img-productos {
-	transition: opacity 0.5s;
-}
-
-.img-productos:hover {
-	opacity: 0.8;
-}
-
 .btn-unite {
 	position: relative;
 	padding: 13px 30px;
@@ -80,10 +61,6 @@
 
 .btn-unite:hover .liquid {
 	top: -120px;
-}
-
-.item_descripcion {
-	min-height: min-content;
 }
 
 @keyframes animate {

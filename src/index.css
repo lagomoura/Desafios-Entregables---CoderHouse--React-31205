@@ -1,26 +1,30 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
 
 .pintas {
-  font-size:1.4rem;
-  font-family: 'Roboto', sans-serif;
+	font-size: 1.4rem;
+	font-family: 'Roboto', sans-serif;
 }
 
-.titulo_logo{
-  letter-spacing:2.5px
+.titulo_logo {
+	letter-spacing: 2.5px;
+}
+
+.loading-page {
+	height: 80vh;
 }
 
 .gracias-compra {
-  height: 80vh;
+	height: 40vh;
 }
