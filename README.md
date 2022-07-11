@@ -1,71 +1,31 @@
-# Getting Started with Create React App
+# Eita! Club Exclusivo de Cerveza 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Este repositorio contiene el proyecto desarrollado durante el curso de ### `React JS` de ### `CoderHouse`s
 
-### `npm start`
+El proyecto consiste en un ecommerce en la cual se puede filtrar los productos en 2 categorias principales y acceder al detalle de cada producto. Es posible agregarlos al carrito y luego complementar el formulario de solicitacion de compra, generando un ID de compra al final del proceso.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Toda la base de datos de productos, estan almancedos en ### `Firebase`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El proyecto se encuentra con el deploy realizado y los mismo puede ser accedido a traves de la url: https://eita-club-cerveza.web.app/
 
-### `npm test`
+Si preferís correrlo de manera local, seguí los siguientes pasos:
+1. Descargá el proyecto de este repositorio.
+2. Abrí el directorio del proyecto en tu editor de código favorito.
+3. Corré el comando *npm start*.
+4. Abrí http://localhost:3000 para verlo en tu navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Las tecnologias utilizadas fueron:
 
-### `npm run build`
+* [React] - Librería que provee componentes de Bootstrap. En este proyecto, utilizada (entre otro lugares) en la Navbar y las card de producto. **Añadido a traves de CDN.**
+* [React-icons](https://react-icons.github.io/react-icons/): Librería utilizada para añadir íconos. En este proyecto, utilizada para el ícono de Cart y en la página de contacto. **Añadilo a tu proyecto con *npm install react-icons*.**
+* [Firebase]
+* [Boostrap]
+* [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start): Paquete para implementar routing dinámico en una web app. En este proyecto, utilizado para el routing. **Añadilo a tu proyecto con *npm add react-router-dom*.**
+* [SweetAlert](https://sweetalert.js.org/guides/): Librerías utilizadas para añadir alertas personalizadas. En este proyecto, utilizadas para avisar al usuario cuando intenta realizar una compra inválida (pedido mayor al stock, menor que 1, etcétera). **Añadilas a tu proyecto con *npm install sweetalert*.**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Encontré un error o tengo una sugerencia!
+Contactame a mouralago@live.com
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Desafios-Entregables---CoderHouse--React-31205

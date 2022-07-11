@@ -39,7 +39,7 @@ function Item({
 									<button
 										type='button'
 										className='btn bg-warning btn-unite text-uppercase m-3'>
-										<span className='text-dark'>Detalles</span>
+										<span className='text-dark'>Comprar</span>
 										<div className='liquid'></div>
 									</button>
 								</Link>

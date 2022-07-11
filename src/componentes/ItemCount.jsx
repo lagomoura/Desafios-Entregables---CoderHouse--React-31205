@@ -105,17 +105,17 @@ function ItemCount({
 				</div>
 				<div className='d-flex gap-4 justify-content-center'>
 					<button
-						onClick={sumar}
+						onClick={restar}
 						type='button'
 						className='btn btn-warning my-3'>
-						+
+						-
 					</button>
 					<h2 className='fw-bold my-3'> {cantidad} </h2>
 					<button
-						onClick={restar}
+						onClick={sumar}
 						type='button'
 						className='btn card-btn btn-warning my-3'>
-						-
+						+
 					</button>
 				</div>
 				<div className='btn_agregarCarrito d-flex flex-column'>
@@ -127,18 +127,27 @@ function ItemCount({
 							agregarAlCarrito(cantidad);
 							addItemCarrito(detalleProducto, cantidad);
 						}}>
-						<span className='text-dark'>Add Carrito</span> 
-						<div className="liquid"></div>
+							<div className="btn-carrito">
+								<span className='text-dark'>Add Carrito</span>
+								<div className="liquid"></div>
+							</div>
 					</button>
 					{cantidadCarrito >= 1 && (
+						<>
 						<Link
 							to='/cart'
 							className='btn card-btn-cart my-1 bg-dark text-warning rounded-pill'>
 							Finalizar mi compra
 						</Link>
+						<Link
+						to='/home'
+						className='btn card-btn-cart my-1 bg-dark text-warning rounded-pill'>
+							Seguir Comprando
+						</Link>
+						</>
 					)}
 
-					<p className='fw-bold'> Disponibilidad: {stock} botellas <IoIosBeer /></p>
+					<p className='fw-bold text-center'> Disponibilidad: {stock} botellas <IoIosBeer /></p>
 				</div>
 			</div>
 		</>

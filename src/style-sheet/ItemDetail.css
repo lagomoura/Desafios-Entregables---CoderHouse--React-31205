@@ -1,16 +1,13 @@
-
-
 .descripcion_detail {
-    font-style: italic;
-    font-size: 0.8rem;
-    max-width: 340px;
-
+	font-style: italic;
+	font-size: 0.8rem;
+	max-width: 340px;
 }
 
 .img-card {
-    transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 .img-card:hover {
-    opacity: 0.8;
+	opacity: 0.8;
 }
