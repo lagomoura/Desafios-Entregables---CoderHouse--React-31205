@@ -1,0 +1,41 @@
+#recicle {
+    background-image: url(../imagenes/recicle.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 50vh;
+    object-position: center;
+}
+
+
+    .titulo-reciclage {
+        font-family: 'Roboto Slab', serif;
+        font-size: 3rem;
+        text-align: center;
+    }    
+
+    .subtitulo--reciclage {
+        font-size: 2.5rem;
+        color: #000;
+        }
+    .logo-texto {
+        letter-spacing: 3.5px;
+    }
+
+
+.btn-reciclage {
+    color: #ffbd52;
+    background-color: #000;
+}
+
+.btn-reciclage:hover {
+    color: #ffbd52;
+    background-color: #000;
+    } 
+
+
+@media screen and (max-width: 320px) {
+    .titulo-reciclage {
+        font-size: 2.2rem !important;
+    }
+}

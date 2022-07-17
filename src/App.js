@@ -1,15 +1,14 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Carrito from './componentes/Carrito';
+import Checkout from './componentes/Checkout';
 import CartContextProvider from './componentes/context/CartContextProvider.jsx';
 import Footer from './componentes/Footer';
 import Home from './componentes/Home.jsx';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/NavBar';
-import TituloTienda from './componentes/TituloTienda';
-import Checkout from './componentes/Checkout';
+import Contacto from './componentes/Contacto';
 
 function App() {
 	//. el (:id) indica que es variable
@@ -17,12 +16,13 @@ function App() {
 		<CartContextProvider>
 			<BrowserRouter>
 				<NavBar />
-				<TituloTienda />
 
 				<Routes>
-					<Route path='/' element={<ItemListContainer />} />
+					<Route path='/' element={<Home />} />
 
 					<Route path='/home' element={<Home />} />
+
+					<Route path='/home/tienda' element={<ItemListContainer />} />
 
 					<Route path='/categoria/:categoria' element={<ItemListContainer />} />
 
@@ -32,6 +32,7 @@ function App() {
 
 					<Route path='cart/checkout' element={<Checkout />} />
 
+					<Route path='/home/contacto' element={<Contacto />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

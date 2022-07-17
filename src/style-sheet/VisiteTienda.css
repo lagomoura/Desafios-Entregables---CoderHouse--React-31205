@@ -1,0 +1,12 @@
+#tienda {
+    background-image: url(../imagenes/tienda3.jpg);
+    min-height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.btn-tienda {
+    font-size: 1.5rem;
+    margin-top: 160px;
+}

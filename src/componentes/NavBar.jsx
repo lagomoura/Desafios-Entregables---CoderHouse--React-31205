@@ -39,22 +39,10 @@ function NavBar() {
 								Inicio
 							</Link>
 						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='#elClub'>
-								{' '}
-								El Club
-							</Link>
-						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='#unite'>
-								{' '}
-								Unite
-							</Link>
-						</li>
 						<li className='nav-item dropdown'>
 							<Link
 								className='nav-link dropdown-toggle'
-								to='/tienda'
+								to='home/tienda'
 								data-bs-toggle='dropdown'
 								aria-expanded='false'>
 								Tienda
@@ -74,6 +62,12 @@ function NavBar() {
 									</Link>
 								</li>
 							</ul>
+						</li>
+						<li className='nav-item'>
+							<Link className='nav-link' to='home/contacto'>
+								{' '}
+								Contacto
+							</Link>
 						</li>
 					</ul>
 					<CartWidget />

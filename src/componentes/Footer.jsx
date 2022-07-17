@@ -48,7 +48,7 @@ function Footer() {
 	}
 
 	return (
-		<footer id='footer' className='bg-warning'>
+		<footer id='footer' className='footer-fondo'>
 			<div className='container-fluid'>
 				<div className='row'>
 					<div className='col-sm-auto col-md-6 col-lg-4 logo d-flex align-items-start justify-content-center my-auto'>

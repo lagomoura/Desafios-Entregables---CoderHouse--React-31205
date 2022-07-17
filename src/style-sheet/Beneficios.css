@@ -1,0 +1,25 @@
+#beneficios {
+	background-image: url(../imagenes/logo-fondo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.beneficio-item {
+	overflow-y: hidden;
+	max-width: 30%;
+	text-align: center;
+	min-height: max-content;
+	min-height: auto;
+}
+.beneficio-item p {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+}
+
+.beneficio-item-titulo {
+	color: #000;
+	font-size: 1.1rem;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+}

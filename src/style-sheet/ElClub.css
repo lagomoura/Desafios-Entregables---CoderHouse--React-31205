@@ -1,0 +1,22 @@
+.titulo-club {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 3rem;
+}
+
+.text-club p {
+	font-family: 'Roboto Slab', serif;
+	text-align: justify;
+}
+
+.img-club {
+	opacity: 0.85;
+	border: 4px solid #ffbd52;
+	transition: all 0.7s;
+	margin-right: 25px;
+}
+
+.img-club:hover {
+	transform: scale(1.1);
+	border: 5px solid #ffbd52;
+	opacity: 0.8;
+}
