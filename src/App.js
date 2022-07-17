@@ -22,7 +22,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<ItemListContainer />} />
 
-					<Route path='/home' element={<ItemListContainer />} />
+					<Route path='/home' element={<Home />} />
 
 					<Route path='/categoria/:categoria' element={<ItemListContainer />} />
 
@@ -32,7 +32,6 @@ function App() {
 
 					<Route path='cart/checkout' element={<Checkout />} />
 
-					<Route path='*' element={<Home />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

@@ -1,0 +1,23 @@
+#carousel-portada {
+	height: 100%;
+	overflow: hidden;
+}
+.carousel-item {
+	max-height: calc(100vh - 78px);
+	overflow: hidden;
+}
+.titulo1-carousel {
+	color: #ffbd52;
+	font-family: sans-serif;
+	overflow-y: hidden;
+}
+
+.subtitulo1-carousel {
+	color: #999;
+}
+
+.titulo2-carousel {
+	color: #000;
+	font-family: sans-serif;
+	overflow-y: hidden;
+}

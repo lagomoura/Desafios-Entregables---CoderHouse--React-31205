@@ -93,7 +93,7 @@ function Carrito({ children, initial }) {
 									type='button'
 									className='btn bg-warning text-capitalize btn-block m-3 rounded'>
 									Terminar Compra
-                  <div className="liquid"></div>	
+									<div className='liquid'></div>
 								</button>
 							</Link>
 						</div>
