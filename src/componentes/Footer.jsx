@@ -57,7 +57,7 @@ function Footer() {
 					<div className='col-sm-auto col-md-6 col-lg-4 d-flex menu-footer justify-content-center align-items-center mx-0 px-1 my-auto'>
 						<ul>
 							<li>
-								<Link to='./home'>INICIO</Link>
+								<Link to='/home'>INICIO</Link>
 							</li>
 							<li>
 								<Link to='/home'>EL CLUB</Link>
@@ -69,13 +69,13 @@ function Footer() {
 								<Link to='/home'>CALENDARIO DE ESTILOS</Link>
 							</li>
 							<li>
-								<Link to='/home'>CONTACTO</Link>
+								<Link to='/home/contacto'>CONTACTO</Link>
 							</li>
 							<li>
-								<Link to='./home'>TIENDA</Link>
+								<Link to='./home/tienda'>TIENDA</Link>
 							</li>
 							<li>
-								<Link to='/home'>MI CUENTA</Link>
+								<Link to='/home/contacto'>MI CUENTA</Link>
 							</li>
 						</ul>
 					</div>

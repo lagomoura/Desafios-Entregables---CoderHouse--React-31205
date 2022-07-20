@@ -21,3 +21,7 @@
 	font-family: 'Roboto Slab', serif;
 	overflow-y: hidden;
 }
+
+.img-carousel {
+	filter: brightness(80%);
+}

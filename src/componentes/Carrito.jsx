@@ -17,13 +17,13 @@ function Carrito({ children, initial }) {
 						return (
 							<div key={producto.id}>
 								<section className='h-100' style={{ backgroundColor: '#eee' }}>
-									<div className='container h-100 pt-5'>
-										<div className='row d-flex justify-content-center align-items-center h-100'>
-											<div className='col-10'>
-												<div className='card rounded-3 mb-2'>
-													<div className='card-body p-2'>
-														<div className='row d-flex justify-content-around align-items-center'>
-															<div className='col-md-2 col-lg-2 col-xl-2'>
+									<div className='container-fluid pt-5'>
+										<div className='row justify-content-center align-items-center'>
+											<div className='col-12 d-flex justify-content-center cart-item-box'>
+												<div className=' rounded-3 mb-2'>
+													<div className='bg-light card-body p-2'>
+														<div className='row d-flex justify-content-center align-items-center'>
+															<div className='col-md-3 col-lg-3 col-xl-3 text-center'>
 																<img
 																	src={producto.url}
 																	className='img-fluid rounded-3'
@@ -44,34 +44,26 @@ function Carrito({ children, initial }) {
 																<p className='text-muted'>
 																	IBU: {producto.ibu}
 																</p>
+																<p className='cantidadProducto fw-bold'>
+																	Cantidad: {producto.cantidad}
+																</p>
 															</div>
-															<div className='col-md-3 col-lg-3 col-xl-2 d-flex'>
-																{/* <button className='btn btn-link px-2 bg-warning'>
-                                    <i className='fas fa-minus' />
-                                  </button> */}
-																<div className='cantidadProducto p-3'>
-																	<p>Cantidad: {producto.cantidad}</p>
-																</div>
-																{/* <button className='btn btn-link px-2 bg-warning'>
-																	<i className='fas fa-plus' />
-																</button> */}
-															</div>
-															<div className='col-md-3 col-lg-2 col-xl-2 offset-lg-1'>
+															<div className='col-md-6 col-lg-6 col-xl-6 offset-lg-1 justify-content-end d-flex'>
 																<h5 className='mb-0'>
-																	${producto.precio * producto.cantidad},00
+																	Valor: ${producto.precio * producto.cantidad},00
 																</h5>
 															</div>
-															<div className='col-md-1 col-lg-1 col-xl-1 text-end'>
-																<a href='#!' className='text-danger'>
-																	<i
-																		onClick={() => {
-																			removerItemCarrito(producto.id);
-																		}}
-																		className='fas fa-trash fa-lg bg-warning p-3 rounded basurita'
-																	/>
-																</a>
-															</div>
 														</div>
+													</div>
+													<div className='d-flex justify-content-end '>
+														<button className='text-danger btn'>
+															<i
+																onClick={() => {
+																	removerItemCarrito(producto.id);
+																}}
+																className='fas fa-trash fa-lg bg-warning p-3 rounded basurita'
+															/>
+														</button>
 													</div>
 												</div>
 											</div>
@@ -109,7 +101,7 @@ function Carrito({ children, initial }) {
 						</p>
 					</div>
 					<div className='btnHome'>
-						<Link to='/home' className='btn btn-warning mb-3 fw-bold'>
+						<Link to='/home/tienda' className='btn btn-warning mb-3 fw-bold'>
 							Elegir Productos
 						</Link>
 					</div>

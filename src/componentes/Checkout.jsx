@@ -137,9 +137,11 @@ export default function Checkout() {
 									className='btn btn-warning px-3 mx-2'>
 									Enviar Pedido
 								</button>
-								<button className='btn btn-dark text-warning px-3 mx-2'>
-									Necesito Ayuda
-								</button>
+								<Link to='/home/contacto'>
+									<button className='btn btn-dark text-warning px-3 mx-2'>
+										Necesito Ayuda
+									</button>
+								</Link>
 							</div>
 						</form>
 					</div>

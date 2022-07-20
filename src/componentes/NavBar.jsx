@@ -2,14 +2,10 @@ import { Link } from 'react-router-dom';
 import '../style-sheet/NavBar.css';
 import CartWidget from './CartWidget.jsx';
 
-
-
 function NavBar() {
 	return (
-		<nav
-			className='navbar navbar-expand-lg navbar-light p-0 mx-0 bg-warning'
-			id='menu'>
-			<div className='container-fluid bg-warning p-1 m-0 d-flex mx-lg-0'>
+		<nav className='navbar navbar-expand-lg navbar-light p-0 mx-0' id='menu'>
+			<div className='container-fluid p-1 m-0 d-flex mx-lg-0'>
 				<Link className='navbar-brand mx-1 my-0' to='/home'>
 					<span className='fs-1 titulo-logo md-4'>Eita!</span>
 					<span className='fw-light subtitulo-logo'>
@@ -28,9 +24,9 @@ function NavBar() {
 					<span className='navbar-toggler-icon' />
 				</button>
 			</div>
-			<div className='container-fluid bg-warning mx-0 d-flex flex-row-reverse'>
+			<div className='container-fluid mx-0 d-flex flex-row-reverse'>
 				<div
-					className='col-lg-6 collapse navbar-collapse navbar-menu bg-warning p-3 m-0'
+					className='col-lg-6 collapse navbar-collapse navbar-menu p-3 m-0'
 					id='navbarSupportedContent'>
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0 d-flex ml-auto'>
 						<li className='nav-item align-bottom align-self-start'>
@@ -49,7 +45,7 @@ function NavBar() {
 							</Link>
 							<ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
 								<li>
-									<Link className='dropdown-item' to="/categoria/ale" >
+									<Link className='dropdown-item' to='/categoria/ale'>
 										Ales
 									</Link>
 								</li>
@@ -57,10 +53,22 @@ function NavBar() {
 									<hr className='dropdown-divider' />
 								</li>
 								<li>
-									<Link className='dropdown-item' to="/categoria/lager">
+									<Link className='dropdown-item' to='/categoria/lager'>
 										Lagers
 									</Link>
 								</li>
+								<div>
+									<li>
+										<hr className='dropdown-divider' />
+									</li>
+									<li>
+										<Link to='/home/tienda'>
+											<span className='dropdown-item fw-bold text-uppercase'>
+												Todos los estilos 🍻
+											</span>
+										</Link>
+									</li>
+								</div>
 							</ul>
 						</li>
 						<li className='nav-item'>

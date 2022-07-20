@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style-sheet/VisitaFabrica.css';
+import { Link } from 'react-router-dom';
 
 export default function VisitaFabrica() {
 	return (
@@ -12,14 +13,16 @@ export default function VisitaFabrica() {
 							className='card-img-top'
 							alt='brewery'
 						/>
-						<div className='card-body d-flex justify-content-center flex-column'>
+						<div className='card-body d-flex justify-content-center flex-column align-items-center'>
 							<p className='card-text text-center'>
 								Tour por nuestra fábrica. Todos los fines de semana, de puertas
 								abiertas a nuestros miembros. Hacé tu reserva!
 							</p>
-							<a href='#fabrica' className='btn btn-warning text-uppercase'>
-								Más info
-							</a>
+							<Link to='/home/contacto'>
+								<button className='btn btn-warning text-uppercase btn-fabrica'>
+									Más info
+								</button>
+							</Link>
 						</div>
 					</div>
 					<div className='card card2 col-sm-12 col-lg-4 align-items-center justify-content-around p-2 g-2'>
@@ -28,15 +31,17 @@ export default function VisitaFabrica() {
 							className='card-img-top'
 							alt='tapbeer'
 						/>
-						<div className='card-body d-flex flex-column justify-content-center'>
+						<div className='card-body d-flex flex-column justify-content-center align-items-center'>
 							<p className='card-text text-center'>
 								Conocé nuestro taproom. Cerveza tirada directo de los tanques de
 								la fábrica. Enterate de nuestros eventos y reservas, en el botón
 								abajo.
 							</p>
-							<a href='#fabrica' className='btn btn-warning text-uppercase'>
-								Nuestro tapboard
-							</a>
+							<Link to='/home/contacto'>
+								<button className='btn btn-warning text-uppercase btn-fabrica'>
+									Nuestro tapboard
+								</button>
+							</Link>
 						</div>
 					</div>
 					<div className='card card3 col-sm-12 col-lg-4 align-items-center justify-content-around p-2 g-2'>
@@ -45,14 +50,16 @@ export default function VisitaFabrica() {
 							className='card-img-top'
 							alt='beer'
 						/>
-						<div className='card-body d-flex flex-column justify-content-center'>
+						<div className='card-body d-flex flex-column justify-content-center align-items-center'>
 							<p className='card-text text-center'>
 								Acceso a nuestra bodega de guarda. Probá nuestros experimentos y
 								descubrí algunas rarezas. Hacé tu reserva ya!
 							</p>
-							<a href='#fabrica' className='btn btn-warning text-uppercase'>
-								Hacé tu reserva
-							</a>
+							<Link to='/home/contacto'>
+								<button className='btn btn-warning text-uppercase btn-fabrica'>
+									Hacé tu reserva
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>

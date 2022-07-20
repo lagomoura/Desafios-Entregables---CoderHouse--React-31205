@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style-sheet/HaceteMiembro.css';
+import { Link } from 'react-router-dom';
 
 export default function HaceteMiembro() {
 	return (
@@ -36,10 +37,12 @@ export default function HaceteMiembro() {
 			<div className='row'>
 				<div className='col-xs-12 col-sm-12 col-lg-12 d-flex justify-content-center py-auto mb-2'>
 					{/* INICIO Boton Simulando Cerveza */}
-					<button className='btn bg-warning btn-unite text-uppercase m-3'>
-						<span className='text-dark'>Sí quiero!</span>
-						<div className='liquid' />
-					</button>
+					<Link to='/home/contacto'>
+						<button className='btn bg-warning btn-unite text-uppercase m-3'>
+							<span className='text-dark'>Sí quiero!</span>
+							<div className='liquid' />
+						</button>
+					</Link>
 					{/* FIN Boton Simulando Cerveza */}
 				</div>
 			</div>

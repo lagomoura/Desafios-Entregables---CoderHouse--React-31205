@@ -4,25 +4,18 @@ import '../style-sheet/Contacto.css';
 export default function Contacto() {
 	return (
 		<section id='portada-cuenta'>
-			<h1 className='text-center text-warning p-3 mx-3 pt-5'>
+			<h3 className='text-center text-warning p-3 mx-3 pt-5'>
 				Desde ya agradecemos tu visita y contacto. Por favor, completar todos
 				los campos abajo.
-			</h1>
+			</h3>
 			<div className='formulario container d-flex justify-content-center align-items-center pt-5'>
 				<form>
 					<div className='mb-3'>
 						<label className='form-label text-warning'>Nombre</label>
-						<input
-							type='name'
-							className='form-control'
-              minLength={3}
-						/>
+						<input type='name' className='form-control' minLength={3} />
 					</div>
 					<div className='mb-3'>
-						<label
-							className='form-label text-warning'>
-							E-mail
-						</label>
+						<label className='form-label text-warning'>E-mail</label>
 						<input
 							type='email'
 							className='form-control'
@@ -30,15 +23,14 @@ export default function Contacto() {
 						/>
 					</div>
 					<div className='mb-3'>
-						<label
-							className='form-label text-warning'>
+						<label className='form-label text-warning'>
 							Escriba su consulta
 						</label>
 						<input
 							type='text'
 							className='form-control'
 							maxLength={100}
-              minLength={5}
+							minLength={5}
 						/>
 					</div>
 					<button type='submit' className='btn btn-warning px-3 mx-2'>

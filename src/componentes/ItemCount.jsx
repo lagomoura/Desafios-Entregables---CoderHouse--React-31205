@@ -140,7 +140,7 @@ function ItemCount({
 							Finalizar mi compra
 						</Link>
 						<Link
-						to='/home'
+						to='/home/tienda'
 						className='btn card-btn-cart my-1 bg-dark text-warning rounded-pill'>
 							Seguir Comprando
 						</Link>
