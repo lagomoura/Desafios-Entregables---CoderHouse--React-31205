@@ -77,6 +77,18 @@ function NavBar() {
 								Contacto
 							</Link>
 						</li>
+						<li className='nav-item'>
+							<Link className='nav-link' to='home/login'>
+								{' '}
+								Mi cuenta
+							</Link>
+						</li>
+						<li className='nav-item'>
+							<Link className='nav-link' to='home/mi-cuenta'>
+								{' '}
+								Test
+							</Link>
+						</li>
 					</ul>
 					<CartWidget />
 				</div>

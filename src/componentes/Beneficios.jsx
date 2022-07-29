@@ -4,7 +4,7 @@ import '../style-sheet/Beneficios.css';
 export default function Beneficios() {
 	return (
 		<section id='beneficios' className='container-fluid p-0 py-3 my-3'>
-			<div className='row d-flex justify-content-center align-items-start'>
+			<div className='row d-flex justify-content-center align-items-center'>
 				<div className='col-sm-4 col-lg-4 beneficio-item' data-aos='zoom-in-up'>
 					<img src={require('../imagenes/beneficio1.png')} className='beneficio1-img' alt='' />
 					<p className='beneficio-item-titulo fw-bold'>

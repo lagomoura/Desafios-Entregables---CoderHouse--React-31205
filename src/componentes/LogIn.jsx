@@ -1,42 +1,58 @@
 import React from 'react';
-import '../style-sheet/Contacto.css';
+import '../style-sheet/LogIn.css';
 
-export default function Contacto() {
+export default function LogIn() {
 	return (
-		<section id='portada-cuenta'>
-			<h3 className='text-center text-warning p-3 mx-3 pt-5'>
-				Desde ya agradecemos tu visita y contacto. Por favor, completar todos
-				los campos abajo.
-			</h3>
+		<section className='login'>
+			<h1 className='text-center text-warning p-3 mx-3 pt-5'>
+				Ingresá a tu cuenta y accedas a todo el material del club. Notícias,
+				novedades y mucho más.
+			</h1>
 			<div className='formulario container d-flex justify-content-center align-items-center pt-5'>
 				<form>
 					<div className='mb-3'>
-						<label className='form-label text-warning'>Nombre</label>
-						<input type='name' className='form-control' minLength={3} />
-					</div>
-					<div className='mb-3'>
-						<label className='form-label text-warning'>E-mail</label>
+						<label
+							htmlFor='exampleInputEmail1'
+							className='form-label text-warning'>
+							ID Usuário
+						</label>
 						<input
 							type='email'
+							className='form-control'
+							id='exampleInputEmail1'
+							aria-describedby='emailHelp'
+						/>
+					</div>
+					<div className='mb-3'>
+						<label
+							htmlFor='exampleInputPassword1'
+							className='form-label text-warning'>
+							Password
+						</label>
+						<input
+							type='password'
 							className='form-control'
 							id='exampleInputPassword1'
 						/>
 					</div>
-					<div className='mb-3'>
-						<label className='form-label text-warning'>
-							Escriba su consulta
-						</label>
+					<div className='mb-3 form-check'>
 						<input
-							type='text'
-							className='form-control'
-							maxLength={100}
-							minLength={5}
+							type='checkbox'
+							className='form-check-input'
+							id='exampleCheck1'
 						/>
+						<label
+							className='form-check-label text-warning'
+							htmlFor='exampleCheck1'>
+							Recordarme
+						</label>
 					</div>
-					<button type='submit' className='btn btn-warning px-3 mx-2'>
-						Enviar Consulta
+					<button type='submit' className='btn btn-warning px-3 mx-2 my-4'>
+						Ingresar
 					</button>
-					<button type='submit' className='btn btn-dark text-warning px-3 mx-2'>
+					<button
+						type='submit'
+						className='btn btn-dark text-warning px-3 mx-2 my-4'>
 						Necesito Ayuda
 					</button>
 				</form>
